@@ -1,7 +1,7 @@
 <img src="https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png" alt="ilustração de um computador" min-width="400px" max-width="400px" width="400px" align="right">
 
 <p align="left"> 
-  Olá, meu nome é <strong>Isaias Silva</strong>, sou um desenvolvedor Full Stack </br> com experiência em diversas tecnologias voltadas para o desenvolvimento web e suporte</br> técnico. Atualmente, estou cursando uma pós-graduação em Desenvolvimento Full Stack na Estácio de Sá,</br> com conclusão prevista para junho de 2025, e trabalho como desenvolvedor Full Stack na VisioIT, onde atuo remotamente desde 2020.
+  Olá, meu nome é <strong>Isaias Silva</strong>, sou um desenvolvedor Full Stack  com experiência em diversas tecnologias voltadas para o desenvolvimento web e suporte técnico. Atualmente, estou cursando uma pós-graduação em Desenvolvimento Full Stack na Estácio de Sá, com conclusão prevista para junho de 2025, e trabalho como desenvolvedor Full Stack na VisioIT, onde atuo remotamente desde 2020.
 </p>
 
 <p align="left">
