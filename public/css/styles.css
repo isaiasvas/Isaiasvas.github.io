@@ -1,0 +1,16 @@
+body,html {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6;
+    color: #333;
+    height: 100%;
+}
+
+img.perfil{
+    box-shadow: -1px 4px 9px rgba(0, 0, 0, 0.5); /* Sombra escura */
+}
+
+.shadow-custom{
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4)!important; /* Sombra escura */
+}
