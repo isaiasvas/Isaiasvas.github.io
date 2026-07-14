@@ -1,23 +1,822 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isaias Silva - Curriculo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="public/css/styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div id="header"></div>
-    <main>
-        <section id="hero"></section>
-        <section id="skills"></section>
-        <section id="services"></section>
-    </main>
-    <div id="footer"></div>
+    <title>Isaías Silva - Desenvolvedor Full Stack | Docente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
 
-    <script src="./public/js/loader.js"></script>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-display {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Animações customizadas */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(16, 185, 129, 0.6);
+            }
+        }
+
+        @keyframes fillBar {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .animate-slideInLeft {
+            animation: slideInLeft 0.6s ease-out forwards;
+        }
+
+        .animate-glow {
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        .skill-bar {
+            animation: fillBar 1.5s ease-out forwards;
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #1e3a8a 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar sticky melhorada */
+        .navbar-bg {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Cards com hover */
+        .card-hover {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            border-color: rgba(16, 185, 129, 0.5);
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.1);
+        }
+
+        /* Badge com estilo */
+        .badge-tech {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(30, 58, 138, 0.1));
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        /* Seção hero parallax */
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #10b981 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-gradient::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero-gradient::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(30, 58, 138, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(20px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Button styles */
+        .btn-primary {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #10b981;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            border: 2px solid #10b981;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: #10b981;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Section spacing */
+        section {
+            padding: 80px 20px;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 50px 20px;
+            }
+        }
+
+        /* Stats counter */
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #10b981;
+        }
+
+        /* Timeline */
+        .timeline-item {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: #10b981;
+            border-radius: 50%;
+            border: 3px solid #0f172a;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 20px;
+            width: 4px;
+            height: calc(100% + 20px);
+            background: rgba(16, 185, 129, 0.2);
+        }
+
+        .timeline-item:last-child::after {
+            display: none;
+        }
+
+        /* Scroll animations */
+        .scroll-fade {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .scroll-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100">
+    <!-- Navbar -->
+    <nav class="navbar-bg fixed w-full top-0 z-50 border-b border-emerald-900/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="font-display font-bold text-xl gradient-text">Isaías Silva</div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#sobre" class="hover:text-emerald-400 transition">Sobre</a>
+                    <a href="#experiencia" class="hover:text-emerald-400 transition">Experiência</a>
+                    <a href="#habilidades" class="hover:text-emerald-400 transition">Habilidades</a>
+                    <a href="#projetos" class="hover:text-emerald-400 transition">Projetos</a>
+                    <a href="#contato" class="hover:text-emerald-400 transition">Contato</a>
+                </div>
+
+                <a href="mailto:isaias@visioit.com.br" class="btn-primary text-sm">Entrar em Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient min-h-screen flex items-center justify-center pt-20">
+        <div class="hero-content max-w-7xl w-full px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Left content -->
+                <div class="animate-slideInLeft">
+                    <div class="inline-block mb-4">
+                        <span class="badge-tech px-4 py-2 rounded-full text-sm font-medium">
+                            🚀 Desenvolvedor Full Stack | Docente
+                        </span>
+                    </div>
+                    
+                    <h1 class="font-display font-800 text-5xl md:text-6xl leading-tight mb-6 text-white">
+                        Transformando Ideias em Código
+                    </h1>
+                    
+                    <p class="text-xl text-slate-300 mb-8 leading-relaxed">
+                        Desenvolvedor Full Stack com experiência em PHP, Python, JavaScript e C#. 
+                        Docente no SENAC aplicando vivências reais de mercado na formação de novos talentos.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="btn-primary">Ver Meu Trabalho</button>
+                        <button class="btn-secondary">Baixar CV</button>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-8 mt-16">
+                        <div>
+                            <div class="stat-number">9+</div>
+                            <p class="text-slate-400">Anos de Experiência</p>
+                        </div>
+                        <div>
+                            <div class="stat-number">30+</div>
+                            <p class="text-slate-400">Projetos Realizados</p>
+                        </div>
+                        <div>
+                            <div class="stat-number">100+</div>
+                            <p class="text-slate-400">Alunos Formados</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right visual -->
+                <div class="animate-fadeInUp hidden md:flex">
+                    <div class="relative w-full h-96">
+                        <!-- Código visual -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-900/20 to-blue-900/20 rounded-2xl backdrop-blur border border-emerald-500/30 p-6 animate-glow">
+                            <div class="font-mono text-sm text-emerald-400 space-y-2">
+                                <p>&lt;developer&gt;</p>
+                                <p class="ml-4">name: "Isaías Silva"</p>
+                                <p class="ml-4">skills: ["PHP", "Python", "React", "C#"]</p>
+                                <p class="ml-4">experience: "Full Stack"</p>
+                                <p class="ml-4">teaching: true</p>
+                                <p>&lt;/developer&gt;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="bg-slate-900 scroll-fade">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-display font-800 text-4xl md:text-5xl mb-4 text-white">
+                    Sobre Mim
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-emerald-400 to-blue-500 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="scroll-fade delay-1">
+                    <p class="text-lg text-slate-300 mb-4 leading-relaxed">
+                        Sou um desenvolvedor apaixonado por criar soluções web robustas e escaláveis, 
+                        com foco em performance e experiência do usuário. Com mais de 9 anos no mercado, 
+                        desenvolvi expertise em múltiplas tecnologias e arquiteturas.
+                    </p>
+                    <p class="text-lg text-slate-300 mb-6 leading-relaxed">
+                        Atualmente atuo como docente no SENAC, compartilhando conhecimento prático de mercado 
+                        e guiando novos desenvolvedores. Também trabalho em projetos desafiadores para a Petrobras 
+                        (via Simworx) com foco em microsserviços e aplicações embarcadas.
+                    </p>
+                </div>
+
+                <div class="scroll-fade delay-2">
+                    <div class="space-y-6">
+                        <div class="card-hover bg-slate-800 p-6 rounded-xl">
+                            <h3 class="font-display font-700 text-emerald-400 mb-2">💻 Full Stack</h3>
+                            <p class="text-slate-400">Desenvolvimento completo de aplicações web, do backend ao frontend</p>
+                        </div>
+                        <div class="card-hover bg-slate-800 p-6 rounded-xl">
+                            <h3 class="font-display font-700 text-emerald-400 mb-2">📚 Docência</h3>
+                            <p class="text-slate-400">Ensino prático em Desenvolvimento Web, Infraestrutura e Jogos Digitais</p>
+                        </div>
+                        <div class="card-hover bg-slate-800 p-6 rounded-xl">
+                            <h3 class="font-display font-700 text-emerald-400 mb-2">🚀 Inovação</h3>
+                            <p class="text-slate-400">Arquitetura, DevOps e soluções escaláveis com tecnologias modernas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiência Section -->
+    <section id="experiencia" class="scroll-fade">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-display font-800 text-4xl md:text-5xl mb-4 text-white">
+                    Experiência Profissional
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-emerald-400 to-blue-500 mx-auto"></div>
+            </div>
+
+            <div class="space-y-6">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item scroll-fade delay-1">
+                    <div class="card-hover bg-slate-800 p-6 rounded-xl">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-display font-700 text-xl text-emerald-400">Docente Informática</h3>
+                            <span class="text-sm text-slate-400">2025 - Atual</span>
+                        </div>
+                        <p class="text-slate-400 mb-3 font-medium">SENAC - Presencial</p>
+                        <p class="text-slate-300">Aulas práticas e integradas em Infraestrutura de Redes, Desenvolvimento Web e Lógica de Programação, com foco em empregabilidade.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item scroll-fade delay-2">
+                    <div class="card-hover bg-slate-800 p-6 rounded-xl">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-display font-700 text-xl text-emerald-400">Desenvolvedor Full Stack</h3>
+                            <span class="text-sm text-slate-400">2025 - Atual</span>
+                        </div>
+                        <p class="text-slate-400 mb-3 font-medium">Simworx (Parceiro Petrobras) - Home office</p>
+                        <p class="text-slate-300">Manutenção e desenvolvimento de microsserviços em Python (Django) e React, com automação via Docker e Jenkins.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item scroll-fade delay-3">
+                    <div class="card-hover bg-slate-800 p-6 rounded-xl">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-display font-700 text-xl text-emerald-400">Desenvolvedor Full Stack</h3>
+                            <span class="text-sm text-slate-400">2020 - 2025</span>
+                        </div>
+                        <p class="text-slate-400 mb-3 font-medium">VisioIT - Home office</p>
+                        <p class="text-slate-300">Desenvolvimento web com PHP (Laravel, Drupal, WordPress) e Python (Django), com interfaces em React e Angular.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item scroll-fade delay-4">
+                    <div class="card-hover bg-slate-800 p-6 rounded-xl">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-display font-700 text-xl text-emerald-400">Analista de Suporte Técnico</h3>
+                            <span class="text-sm text-slate-400">2023 - 2024</span>
+                        </div>
+                        <p class="text-slate-400 mb-3 font-medium">SESC Araraquara - Araraquara, SP</p>
+                        <p class="text-slate-300">Gerenciamento de Active Directory, suporte técnico e documentação de processos em infraestrutura de TI.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades Section -->
+    <section id="habilidades" class="bg-slate-900 scroll-fade">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-display font-800 text-4xl md:text-5xl mb-4 text-white">
+                    Habilidades Técnicas
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-emerald-400 to-blue-500 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Backend -->
+                <div class="scroll-fade delay-1">
+                    <h3 class="font-display font-700 text-2xl mb-8 text-white">Backend</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">PHP (Laravel, Drupal, WordPress)</span>
+                                <span class="text-emerald-400 text-sm">95%</span>
+                            </div>
+                            <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-emerald-400 to-emerald-600 skill-bar" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Python (Django)</span>
+                                <span class="text-emerald-400 text-sm">90%</span>
+                            </div>
+                            <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-emerald-400 to-emerald-600 skill-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">C# (.NET, Dynamics 365)</span>
+                                <span class="text-emerald-400 text-sm">75%</span>
+                            </div>
+                            <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-emerald-400 to-emerald-600 skill-bar" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend -->
+                <div class="scroll-fade delay-2">
+                    <h3 class="font-display font-700 text-2xl mb-8 text-white">Frontend</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">JavaScript</span>
+                                <span class="text-emerald-400 text-sm">95%</span>
+                            </div>
+                            <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-blue-400 to-blue-600 skill-bar" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">React</span>
+                                <span class="text-emerald-400 text-sm">90%</span>
+                            </div>
+                            <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-blue-400 to-blue-600 skill-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Angular</span>
+                                <span class="text-emerald-400 text-sm">85%</span>
+                            </div>
+                            <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-blue-400 to-blue-600 skill-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DevOps & Tools -->
+                <div class="scroll-fade delay-3">
+                    <h3 class="font-display font-700 text-2xl mb-8 text-white">DevOps & Ferramentas</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Docker</span>
+                                <span class="text-emerald-400 text-sm">85%</span>
+                            </div>
+                            <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-orange-400 to-orange-600 skill-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Git / GitHub</span>
+                                <span class="text-emerald-400 text-sm">95%</span>
+                            </div>
+                            <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-orange-400 to-orange-600 skill-bar" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Jenkins / CI-CD</span>
+                                <span class="text-emerald-400 text-sm">80%</span>
+                            </div>
+                            <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-orange-400 to-orange-600 skill-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bancos de Dados -->
+                <div class="scroll-fade delay-4">
+                    <h3 class="font-display font-700 text-2xl mb-8 text-white">Bancos de Dados & Plataformas</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">PostgreSQL</span>
+                                <span class="text-emerald-400 text-sm">90%</span>
+                            </div>
+                            <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-indigo-400 to-indigo-600 skill-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">MySQL</span>
+                                <span class="text-emerald-400 text-sm">90%</span>
+                            </div>
+                            <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-indigo-400 to-indigo-600 skill-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Azure & Microsoft Dynamics 365</span>
+                                <span class="text-emerald-400 text-sm">80%</span>
+                            </div>
+                            <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-indigo-400 to-indigo-600 skill-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos Section -->
+    <section id="projetos" class="scroll-fade">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-display font-800 text-4xl md:text-5xl mb-4 text-white">
+                    Projetos Relevantes
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-emerald-400 to-blue-500 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Projeto 1 -->
+                <div class="card-hover bg-slate-800 rounded-xl overflow-hidden scroll-fade delay-1 flex flex-col">
+                    <div class="h-40 bg-gradient-to-br from-emerald-500 to-emerald-700"></div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="font-display font-700 text-xl mb-2 text-white">Gestão de Estoque</h3>
+                        <p class="text-slate-400 mb-4 flex-1">Sistema de gestão de estoque e controle de vendas em produção com Python (Django).</p>
+                        <div class="flex gap-2 flex-wrap">
+                            <span class="badge-tech px-3 py-1 rounded text-xs">Python</span>
+                            <span class="badge-tech px-3 py-1 rounded text-xs">Django</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 2 -->
+                <div class="card-hover bg-slate-800 rounded-xl overflow-hidden scroll-fade delay-2 flex flex-col">
+                    <div class="h-40 bg-gradient-to-br from-blue-500 to-blue-700"></div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="font-display font-700 text-xl mb-2 text-white">Portal Institucional</h3>
+                        <p class="text-slate-400 mb-4 flex-1">Portal com Drupal 9, módulos personalizados e integração com APIs externas.</p>
+                        <div class="flex gap-2 flex-wrap">
+                            <span class="badge-tech px-3 py-1 rounded text-xs">Drupal</span>
+                            <span class="badge-tech px-3 py-1 rounded text-xs">APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 3 -->
+                <div class="card-hover bg-slate-800 rounded-xl overflow-hidden scroll-fade delay-3 flex flex-col">
+                    <div class="h-40 bg-gradient-to-br from-orange-500 to-orange-700"></div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="font-display font-700 text-xl mb-2 text-white">CRM Customizado</h3>
+                        <p class="text-slate-400 mb-4 flex-1">Plugins e APIs personalizadas para Microsoft Dynamics 365 com Power Automate.</p>
+                        <div class="flex gap-2 flex-wrap">
+                            <span class="badge-tech px-3 py-1 rounded text-xs">C#</span>
+                            <span class="badge-tech px-3 py-1 rounded text-xs">Dynamics 365</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 4 -->
+                <div class="card-hover bg-slate-800 rounded-xl overflow-hidden scroll-fade delay-4 flex flex-col">
+                    <div class="h-40 bg-gradient-to-br from-purple-500 to-purple-700"></div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="font-display font-700 text-xl mb-2 text-white">Dashboard Analítico</h3>
+                        <p class="text-slate-400 mb-4 flex-1">Dashboard em React para visualização de métricas com gráficos interativos.</p>
+                        <div class="flex gap-2 flex-wrap">
+                            <span class="badge-tech px-3 py-1 rounded text-xs">React</span>
+                            <span class="badge-tech px-3 py-1 rounded text-xs">APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 5 -->
+                <div class="card-hover bg-slate-800 rounded-xl overflow-hidden scroll-fade delay-5 flex flex-col">
+                    <div class="h-40 bg-gradient-to-br from-pink-500 to-pink-700"></div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="font-display font-700 text-xl mb-2 text-white">Intranet Corporativa</h3>
+                        <p class="text-slate-400 mb-4 flex-1">Intranet com Drupal, autenticação LDAP e integração com Active Directory.</p>
+                        <div class="flex gap-2 flex-wrap">
+                            <span class="badge-tech px-3 py-1 rounded text-xs">Drupal</span>
+                            <span class="badge-tech px-3 py-1 rounded text-xs">LDAP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projeto 6 -->
+                <div class="card-hover bg-slate-800 rounded-xl overflow-hidden scroll-fade delay-1 flex flex-col">
+                    <div class="h-40 bg-gradient-to-br from-red-500 to-red-700"></div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="font-display font-700 text-xl mb-2 text-white">Plataforma Educacional</h3>
+                        <p class="text-slate-400 mb-4 flex-1">Aplicação web educacional com recursos gamificados e desafios interativos.</p>
+                        <div class="flex gap-2 flex-wrap">
+                            <span class="badge-tech px-3 py-1 rounded text-xs">HTML/CSS</span>
+                            <span class="badge-tech px-3 py-1 rounded text-xs">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formação Section -->
+    <section class="bg-slate-900 scroll-fade">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-display font-800 text-4xl md:text-5xl mb-4 text-white">
+                    Formação Acadêmica
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-emerald-400 to-blue-500 mx-auto"></div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="timeline-item scroll-fade delay-1">
+                    <div class="card-hover bg-slate-800 p-6 rounded-xl">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-display font-700 text-xl text-emerald-400">Pós-Graduação em Desenvolvimento Full Stack</h3>
+                            <span class="text-sm text-slate-400">2024 - Dezembro/2025</span>
+                        </div>
+                        <p class="text-slate-400 font-medium">Estácio de Sá (EAD)</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item scroll-fade delay-2">
+                    <div class="card-hover bg-slate-800 p-6 rounded-xl">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-display font-700 text-xl text-emerald-400">Bacharel em Sistemas de Informação</h3>
+                            <span class="text-sm text-slate-400">2015 - 2022</span>
+                        </div>
+                        <p class="text-slate-400 font-medium">Universidade de Araraquara (Uniara)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-gradient-to-r from-slate-900 via-emerald-900/20 to-slate-900 scroll-fade">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-display font-800 text-4xl md:text-5xl mb-6 text-white">
+                Pronto para Iniciar um Projeto?
+            </h2>
+            <p class="text-xl text-slate-300 mb-8">
+                Estou sempre aberto a novos desafios e colaborações. Vamos conversar!
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="btn-primary">Enviar Mensagem</button>
+                <a href="mailto:isaias@visioit.com.br" class="btn-secondary">isaias@visioit.com.br</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="scroll-fade">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-display font-800 text-4xl md:text-5xl mb-4 text-white">
+                    Entre em Contato
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-emerald-400 to-blue-500 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card-hover bg-slate-800 p-8 rounded-xl text-center scroll-fade delay-1">
+                    <div class="text-3xl mb-4">📧</div>
+                    <h3 class="font-display font-700 text-xl mb-2">Email</h3>
+                    <a href="mailto:isaias@visioit.com.br" class="text-emerald-400 hover:text-emerald-300">
+                        isaias@visioit.com.br
+                    </a>
+                </div>
+
+                <div class="card-hover bg-slate-800 p-8 rounded-xl text-center scroll-fade delay-2">
+                    <div class="text-3xl mb-4">📱</div>
+                    <h3 class="font-display font-700 text-xl mb-2">Telefone</h3>
+                    <a href="tel:+5516997505196" class="text-emerald-400 hover:text-emerald-300">
+                        +55 (16) 99750-5196
+                    </a>
+                </div>
+
+                <div class="card-hover bg-slate-800 p-8 rounded-xl text-center scroll-fade delay-3">
+                    <div class="text-3xl mb-4">💼</div>
+                    <h3 class="font-display font-700 text-xl mb-2">LinkedIn</h3>
+                    <a href="https://linkedin.com/in/isaiasvasilva" target="_blank" class="text-emerald-400 hover:text-emerald-300">
+                        /in/isaiasvasilva
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-400">
+            <p>© 2025 Isaías Silva. Desenvolvido com dedicação e paixão por código.</p>
+        </div>
+    </footer>
+
+    <!-- Script para animações ao scroll -->
+    <script>
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observar todos os elementos com classe scroll-fade
+        document.querySelectorAll('.scroll-fade').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll para links de navegação
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Efeito parallax no hero
+        window.addEventListener('scroll', function() {
+            const hero = document.querySelector('.hero-gradient');
+            if (hero) {
+                hero.style.backgroundPosition = '0 ' + (window.scrollY * 0.5) + 'px';
+            }
+        });
+    </script>
 </body>
 </html>
