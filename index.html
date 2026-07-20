@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isaías Silva | Desenvolvedor Full Stack &amp; Docente de Tecnologia</title>
-    <meta name="description" content="Desenvolvedor Full Stack com experiência em PHP/Laravel, Python/Django, React, Angular e C#/Dynamics 365. Docente de Desenvolvimento de Sistemas no SENAC, em Araraquara-SP.">
-    <meta name="keywords" content="Desenvolvedor Full Stack, PHP, Laravel, Python, Django, React, Angular, C#, Dynamics 365, Docker, Git, Araraquara">
+    <meta name="description"
+        content="Desenvolvedor Full Stack com experiência em PHP/Laravel, Python/Django, React, Angular e C#/Dynamics 365. Docente de Desenvolvimento de Sistemas no SENAC, em Araraquara-SP.">
+    <meta name="keywords"
+        content="Desenvolvedor Full Stack, PHP, Laravel, Python, Django, React, Angular, C#, Dynamics 365, Docker, Git, Araraquara">
     <meta name="author" content="Isaias Vitor de Almeida Silva">
     <link rel="canonical" href="https://isaiasvas.github.io/">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Isaías Silva | Desenvolvedor Full Stack & Docente de Tecnologia">
-    <meta property="og:description" content="Desenvolvedor Full Stack com experiência em PHP/Laravel, Python/Django, React, Angular e C#/Dynamics 365.">
+    <meta property="og:description"
+        content="Desenvolvedor Full Stack com experiência em PHP/Laravel, Python/Django, React, Angular e C#/Dynamics 365.">
     <meta property="og:url" content="https://isaiasvas.github.io/">
     <meta property="og:image" content="https://isaiasvas.github.io/assets/og-image.jpg">
     <meta property="og:locale" content="pt_BR">
@@ -20,11 +24,13 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Isaías Silva | Desenvolvedor Full Stack & Docente de Tecnologia">
-    <meta name="twitter:description" content="Desenvolvedor Full Stack com experiência em PHP/Laravel, Python/Django, React, Angular e C#/Dynamics 365.">
+    <meta name="twitter:description"
+        content="Desenvolvedor Full Stack com experiência em PHP/Laravel, Python/Django, React, Angular e C#/Dynamics 365.">
     <meta name="twitter:image" content="https://isaiasvas.github.io/assets/og-image.jpg">
 
     <!-- Favicons -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f172a'/%3E%3Ctext x='50' y='68' font-size='55' font-family='sans-serif' font-weight='800' text-anchor='middle' fill='%2310b981'%3EIS%3C/text%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f172a'/%3E%3Ctext x='50' y='68' font-size='55' font-family='sans-serif' font-weight='800' text-anchor='middle' fill='%2310b981'%3EIS%3C/text%3E%3C/svg%3E">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -34,12 +40,14 @@
             font-family: 'Inter', sans-serif;
         }
 
-        html, body {
+        html,
+        body {
             overflow-x: hidden;
             max-width: 100vw;
         }
 
-        img, svg {
+        img,
+        svg {
             max-width: 100%;
         }
 
@@ -53,6 +61,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -64,6 +73,7 @@
                 opacity: 0;
                 transform: translateX(-40px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -71,9 +81,12 @@
         }
 
         @keyframes glow {
-            0%, 100% {
+
+            0%,
+            100% {
                 box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
             }
+
             50% {
                 box-shadow: 0 0 40px rgba(16, 185, 129, 0.6);
             }
@@ -83,6 +96,7 @@
             from {
                 width: 0;
             }
+
             to {
                 width: 100%;
             }
@@ -104,11 +118,25 @@
             animation: fillBar 1.5s ease-out forwards;
         }
 
-        .delay-1 { animation-delay: 0.1s; }
-        .delay-2 { animation-delay: 0.2s; }
-        .delay-3 { animation-delay: 0.3s; }
-        .delay-4 { animation-delay: 0.4s; }
-        .delay-5 { animation-delay: 0.5s; }
+        .delay-1 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.3s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-5 {
+            animation-delay: 0.5s;
+        }
 
         /* Gradient text */
         .gradient-text {
@@ -179,8 +207,15 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(20px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(20px);
+            }
         }
 
         .hero-content {
@@ -290,21 +325,70 @@
         }
 
         /* ===== Modo claro ===== */
-        body.light-mode { background-color: #f8fafc; }
+        body.light-mode {
+            background-color: #f8fafc;
+        }
+
         body.light-mode.bg-slate-950,
         body.light-mode section.bg-slate-950,
-        body.light-mode .bg-slate-950 { background-color: #f8fafc !important; }
-        body.light-mode .bg-slate-900 { background-color: #f1f5f9 !important; }
-        body.light-mode .bg-slate-800 { background-color: #ffffff !important; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
-        body.light-mode .border-slate-800 { border-color: #e2e8f0 !important; }
+        body.light-mode .bg-slate-950 {
+            background-color: #f8fafc !important;
+        }
+
+        body.light-mode .bg-slate-900 {
+            background-color: #f1f5f9 !important;
+        }
+
+        body.light-mode .bg-slate-800 {
+            background-color: #ffffff !important;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+
+        body.light-mode .border-slate-800 {
+            border-color: #e2e8f0 !important;
+        }
+
         body.light-mode .text-slate-100,
-        body.light-mode.text-slate-100 { color: #0f172a !important; }
-        body.light-mode .text-white { color: #0f172a !important; }
-        body.light-mode .text-slate-300 { color: #334155 !important; }
-        body.light-mode .text-slate-400 { color: #64748b !important; }
-        body.light-mode .navbar-bg { background: rgba(255, 255, 255, 0.9) !important; }
-        body.light-mode .card-hover { border-color: rgba(16, 185, 129, 0.3); }
-        body.light-mode footer.bg-slate-950 { background-color: #f1f5f9 !important; }
+        body.light-mode.text-slate-100 {
+            color: #0f172a !important;
+        }
+
+        body.light-mode .text-white {
+            color: #0f172a !important;
+        }
+
+        body.light-mode .text-slate-300 {
+            color: #334155 !important;
+        }
+
+        body.light-mode .text-slate-400 {
+            color: #64748b !important;
+        }
+
+        body.light-mode .navbar-bg {
+            background: rgba(255, 255, 255, 0.9) !important;
+        }
+
+        body.light-mode .card-hover {
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+
+        body.light-mode footer.bg-slate-950 {
+            background-color: #f1f5f9 !important;
+        }
+
+        body.light-mode .hero-gradient .text-white,
+        body.light-mode .hero-gradient h1 {
+            color: #ffffff !important;
+        }
+
+        body.light-mode .hero-gradient .text-slate-300 {
+            color: #e2e8f0 !important;
+        }
+
+        body.light-mode .hero-gradient .text-slate-400 {
+            color: #cbd5e1 !important;
+        }
     </style>
 
     <script type="application/ld+json">
@@ -329,13 +413,14 @@
     }
     </script>
 </head>
+
 <body class="bg-slate-950 text-slate-100">
     <!-- Navbar -->
     <nav class="navbar-bg fixed w-full top-0 z-50 border-b border-emerald-900/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="font-display font-bold text-xl gradient-text">Isaías Silva</div>
-                
+
                 <div class="hidden md:flex space-x-8">
                     <a href="#sobre" class="hover:text-emerald-400 transition">Sobre</a>
                     <a href="#experiencia" class="hover:text-emerald-400 transition">Experiência</a>
@@ -345,11 +430,14 @@
                 </div>
 
                 <div class="flex items-center gap-3">
-                    <button id="theme-toggle" aria-label="Alternar modo claro/escuro" class="w-9 h-9 flex items-center justify-center rounded-full border border-emerald-500/30 hover:border-emerald-400 transition text-lg">
+                    <button id="theme-toggle" aria-label="Alternar modo claro/escuro"
+                        class="w-9 h-9 flex items-center justify-center rounded-full border border-emerald-500/30 hover:border-emerald-400 transition text-lg">
                         🌙
                     </button>
-                    <a href="mailto:isaias@visioit.com.br" class="hidden sm:inline-block btn-primary text-sm">Entrar em Contato</a>
-                    <button id="mobile-menu-btn" aria-label="Abrir menu" class="md:hidden w-9 h-9 flex items-center justify-center rounded-full border border-emerald-500/30 text-lg">
+                    <a href="mailto:isaias@visioit.com.br" class="hidden sm:inline-block btn-primary text-sm">Entrar em
+                        Contato</a>
+                    <button id="mobile-menu-btn" aria-label="Abrir menu"
+                        class="md:hidden w-9 h-9 flex items-center justify-center rounded-full border border-emerald-500/30 text-lg">
                         ☰
                     </button>
                 </div>
@@ -377,19 +465,20 @@
                             Desenvolvedor Full Stack | Docente
                         </span>
                     </div>
-                    
-                    <h1 class="font-display font-800 text-4xl sm:text-5xl md:text-6xl leading-tight mb-6 text-white break-words">
+
+                    <h1
+                        class="font-display font-800 text-4xl sm:text-5xl md:text-6xl leading-tight mb-6 text-white break-words">
                         Transformando Ideias em Código
                     </h1>
-                    
+
                     <p class="text-base sm:text-lg md:text-xl text-slate-300 mb-8 leading-relaxed">
-                        Desenvolvedor Full Stack com experiência em PHP, Python, JavaScript e C#. 
+                        Desenvolvedor Full Stack com experiência em PHP, Python, JavaScript e C#.
                         Docente no SENAC aplicando vivências reais de mercado na formação de novos talentos.
                     </p>
 
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a class="btn-primary" href="#projetos">Ver Meu Trabalho</a>
-                        <a class="btn-secondary" href="assets/Isaias_Silva.pdf" download>Baixar CV</a>
+                        <a class="btn-secondary" href="assets/Isaias_Silva_Curriculo.pdf" download>Baixar CV</a>
                     </div>
 
                     <!-- Stats -->
@@ -413,7 +502,8 @@
                 <div class="animate-fadeInUp hidden md:flex">
                     <div class="relative w-full h-96">
                         <!-- Código visual -->
-                        <div class="absolute inset-0 bg-gradient-to-br from-emerald-900/20 to-blue-900/20 rounded-2xl backdrop-blur border border-emerald-500/30 p-6 animate-glow">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-br from-emerald-900/20 to-blue-900/20 rounded-2xl backdrop-blur border border-emerald-500/30 p-6 animate-glow">
                             <div class="font-mono text-sm text-emerald-400 space-y-2">
                                 <p>&lt;developer&gt;</p>
                                 <p class="ml-4">name: "Isaías Silva"</p>
@@ -442,13 +532,13 @@
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="scroll-fade delay-1">
                     <p class="text-lg text-slate-300 mb-4 leading-relaxed">
-                        Sou um desenvolvedor apaixonado por criar soluções web robustas e escaláveis, 
-                        com foco em performance e experiência do usuário. Com mais de 9 anos no mercado, 
+                        Sou um desenvolvedor apaixonado por criar soluções web robustas e escaláveis,
+                        com foco em performance e experiência do usuário. Com mais de 9 anos no mercado,
                         desenvolvi expertise em múltiplas tecnologias e arquiteturas.
                     </p>
                     <p class="text-lg text-slate-300 mb-6 leading-relaxed">
-                        Atualmente atuo como docente no SENAC, compartilhando conhecimento prático de mercado 
-                        e guiando novos desenvolvedores. Também trabalho em projetos desafiadores para a Petrobras 
+                        Atualmente atuo como docente no SENAC, compartilhando conhecimento prático de mercado
+                        e guiando novos desenvolvedores. Também trabalho em projetos desafiadores para a Petrobras
                         (via Simworx) com foco em microsserviços e aplicações embarcadas.
                     </p>
                 </div>
@@ -457,15 +547,18 @@
                     <div class="space-y-6">
                         <div class="card-hover bg-slate-800 p-6 rounded-xl">
                             <h3 class="font-display font-700 text-emerald-400 mb-2">Full Stack</h3>
-                            <p class="text-slate-400">Desenvolvimento completo de aplicações web, do backend ao frontend</p>
+                            <p class="text-slate-400">Desenvolvimento completo de aplicações web, do backend ao frontend
+                            </p>
                         </div>
                         <div class="card-hover bg-slate-800 p-6 rounded-xl">
                             <h3 class="font-display font-700 text-emerald-400 mb-2">Docência</h3>
-                            <p class="text-slate-400">Ensino prático em Desenvolvimento Web, Infraestrutura e Jogos Digitais</p>
+                            <p class="text-slate-400">Ensino prático em Desenvolvimento Web, Infraestrutura e Jogos
+                                Digitais</p>
                         </div>
                         <div class="card-hover bg-slate-800 p-6 rounded-xl">
                             <h3 class="font-display font-700 text-emerald-400 mb-2">Inovação</h3>
-                            <p class="text-slate-400">Arquitetura, DevOps e soluções escaláveis com tecnologias modernas</p>
+                            <p class="text-slate-400">Arquitetura, DevOps e soluções escaláveis com tecnologias modernas
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -492,7 +585,8 @@
                             <span class="text-sm text-slate-400">2025 - Atual</span>
                         </div>
                         <p class="text-slate-400 mb-3 font-medium">SENAC - Presencial</p>
-                        <p class="text-slate-300">Aulas práticas e integradas em Infraestrutura de Redes, Desenvolvimento Web e Lógica de Programação, com foco em empregabilidade.</p>
+                        <p class="text-slate-300">Aulas práticas e integradas em Infraestrutura de Redes,
+                            Desenvolvimento Web e Lógica de Programação, com foco em empregabilidade.</p>
                     </div>
                 </div>
 
@@ -504,7 +598,8 @@
                             <span class="text-sm text-slate-400">2025 - Atual</span>
                         </div>
                         <p class="text-slate-400 mb-3 font-medium">Simworx (Parceiro Petrobras) - Home office</p>
-                        <p class="text-slate-300">Manutenção e desenvolvimento de microsserviços em Python (Django) e React, com automação via Docker e Jenkins.</p>
+                        <p class="text-slate-300">Manutenção e desenvolvimento de microsserviços em Python (Django) e
+                            React, com automação via Docker e Jenkins.</p>
                     </div>
                 </div>
 
@@ -516,7 +611,8 @@
                             <span class="text-sm text-slate-400">2020 - 2025</span>
                         </div>
                         <p class="text-slate-400 mb-3 font-medium">VisioIT - Home office</p>
-                        <p class="text-slate-300">Desenvolvimento web com PHP (Laravel, Drupal, WordPress) e Python (Django), com interfaces em React e Angular.</p>
+                        <p class="text-slate-300">Desenvolvimento web com PHP (Laravel, Drupal, WordPress) e Python
+                            (Django), com interfaces em React e Angular.</p>
                     </div>
                 </div>
 
@@ -528,7 +624,8 @@
                             <span class="text-sm text-slate-400">2023 - 2024</span>
                         </div>
                         <p class="text-slate-400 mb-3 font-medium">SESC Araraquara - Araraquara, SP</p>
-                        <p class="text-slate-300">Gerenciamento de Active Directory, suporte técnico e documentação de processos em infraestrutura de TI.</p>
+                        <p class="text-slate-300">Gerenciamento de Active Directory, suporte técnico e documentação de
+                            processos em infraestrutura de TI.</p>
                     </div>
                 </div>
             </div>
@@ -556,7 +653,8 @@
                                 <span class="text-emerald-400 text-sm">95%</span>
                             </div>
                             <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-emerald-400 to-emerald-600 skill-bar" style="width: 95%"></div>
+                                <div class="h-full bg-gradient-to-r from-emerald-400 to-emerald-600 skill-bar"
+                                    style="width: 95%"></div>
                             </div>
                         </div>
                         <div>
@@ -565,7 +663,8 @@
                                 <span class="text-emerald-400 text-sm">90%</span>
                             </div>
                             <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-emerald-400 to-emerald-600 skill-bar" style="width: 90%"></div>
+                                <div class="h-full bg-gradient-to-r from-emerald-400 to-emerald-600 skill-bar"
+                                    style="width: 90%"></div>
                             </div>
                         </div>
                         <div>
@@ -574,7 +673,8 @@
                                 <span class="text-emerald-400 text-sm">75%</span>
                             </div>
                             <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-emerald-400 to-emerald-600 skill-bar" style="width: 75%"></div>
+                                <div class="h-full bg-gradient-to-r from-emerald-400 to-emerald-600 skill-bar"
+                                    style="width: 75%"></div>
                             </div>
                         </div>
                     </div>
@@ -590,7 +690,8 @@
                                 <span class="text-emerald-400 text-sm">95%</span>
                             </div>
                             <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-blue-400 to-blue-600 skill-bar" style="width: 95%"></div>
+                                <div class="h-full bg-gradient-to-r from-blue-400 to-blue-600 skill-bar"
+                                    style="width: 95%"></div>
                             </div>
                         </div>
                         <div>
@@ -599,7 +700,8 @@
                                 <span class="text-emerald-400 text-sm">90%</span>
                             </div>
                             <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-blue-400 to-blue-600 skill-bar" style="width: 90%"></div>
+                                <div class="h-full bg-gradient-to-r from-blue-400 to-blue-600 skill-bar"
+                                    style="width: 90%"></div>
                             </div>
                         </div>
                         <div>
@@ -608,7 +710,8 @@
                                 <span class="text-emerald-400 text-sm">85%</span>
                             </div>
                             <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-blue-400 to-blue-600 skill-bar" style="width: 85%"></div>
+                                <div class="h-full bg-gradient-to-r from-blue-400 to-blue-600 skill-bar"
+                                    style="width: 85%"></div>
                             </div>
                         </div>
                     </div>
@@ -624,7 +727,8 @@
                                 <span class="text-emerald-400 text-sm">85%</span>
                             </div>
                             <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-orange-400 to-orange-600 skill-bar" style="width: 85%"></div>
+                                <div class="h-full bg-gradient-to-r from-orange-400 to-orange-600 skill-bar"
+                                    style="width: 85%"></div>
                             </div>
                         </div>
                         <div>
@@ -633,7 +737,8 @@
                                 <span class="text-emerald-400 text-sm">95%</span>
                             </div>
                             <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-orange-400 to-orange-600 skill-bar" style="width: 95%"></div>
+                                <div class="h-full bg-gradient-to-r from-orange-400 to-orange-600 skill-bar"
+                                    style="width: 95%"></div>
                             </div>
                         </div>
                         <div>
@@ -642,7 +747,8 @@
                                 <span class="text-emerald-400 text-sm">80%</span>
                             </div>
                             <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-orange-400 to-orange-600 skill-bar" style="width: 80%"></div>
+                                <div class="h-full bg-gradient-to-r from-orange-400 to-orange-600 skill-bar"
+                                    style="width: 80%"></div>
                             </div>
                         </div>
                     </div>
@@ -658,7 +764,8 @@
                                 <span class="text-emerald-400 text-sm">90%</span>
                             </div>
                             <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-indigo-400 to-indigo-600 skill-bar" style="width: 90%"></div>
+                                <div class="h-full bg-gradient-to-r from-indigo-400 to-indigo-600 skill-bar"
+                                    style="width: 90%"></div>
                             </div>
                         </div>
                         <div>
@@ -667,7 +774,8 @@
                                 <span class="text-emerald-400 text-sm">90%</span>
                             </div>
                             <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-indigo-400 to-indigo-600 skill-bar" style="width: 90%"></div>
+                                <div class="h-full bg-gradient-to-r from-indigo-400 to-indigo-600 skill-bar"
+                                    style="width: 90%"></div>
                             </div>
                         </div>
                         <div>
@@ -676,7 +784,8 @@
                                 <span class="text-emerald-400 text-sm">80%</span>
                             </div>
                             <div class="h-2 bg-slate-800 rounded-full overflow-hidden">
-                                <div class="h-full bg-gradient-to-r from-indigo-400 to-indigo-600 skill-bar" style="width: 80%"></div>
+                                <div class="h-full bg-gradient-to-r from-indigo-400 to-indigo-600 skill-bar"
+                                    style="width: 80%"></div>
                             </div>
                         </div>
                     </div>
@@ -701,7 +810,8 @@
                     <div class="h-40 bg-gradient-to-br from-emerald-500 to-emerald-700"></div>
                     <div class="p-6 flex-1 flex flex-col">
                         <h3 class="font-display font-700 text-xl mb-2 text-white">Gestão de Estoque</h3>
-                        <p class="text-slate-400 mb-4 flex-1">Sistema de gestão de estoque e controle de vendas em produção com Python (Django).</p>
+                        <p class="text-slate-400 mb-4 flex-1">Sistema de gestão de estoque e controle de vendas em
+                            produção com Python (Django).</p>
                         <div class="flex gap-2 flex-wrap">
                             <span class="badge-tech px-3 py-1 rounded text-xs">Python</span>
                             <span class="badge-tech px-3 py-1 rounded text-xs">Django</span>
@@ -714,7 +824,8 @@
                     <div class="h-40 bg-gradient-to-br from-blue-500 to-blue-700"></div>
                     <div class="p-6 flex-1 flex flex-col">
                         <h3 class="font-display font-700 text-xl mb-2 text-white">Portal Institucional</h3>
-                        <p class="text-slate-400 mb-4 flex-1">Portal com Drupal 9, módulos personalizados e integração com APIs externas.</p>
+                        <p class="text-slate-400 mb-4 flex-1">Portal com Drupal 9, módulos personalizados e integração
+                            com APIs externas.</p>
                         <div class="flex gap-2 flex-wrap">
                             <span class="badge-tech px-3 py-1 rounded text-xs">Drupal</span>
                             <span class="badge-tech px-3 py-1 rounded text-xs">APIs</span>
@@ -727,7 +838,8 @@
                     <div class="h-40 bg-gradient-to-br from-orange-500 to-orange-700"></div>
                     <div class="p-6 flex-1 flex flex-col">
                         <h3 class="font-display font-700 text-xl mb-2 text-white">CRM Customizado</h3>
-                        <p class="text-slate-400 mb-4 flex-1">Plugins e APIs personalizadas para Microsoft Dynamics 365 com Power Automate.</p>
+                        <p class="text-slate-400 mb-4 flex-1">Plugins e APIs personalizadas para Microsoft Dynamics 365
+                            com Power Automate.</p>
                         <div class="flex gap-2 flex-wrap">
                             <span class="badge-tech px-3 py-1 rounded text-xs">C#</span>
                             <span class="badge-tech px-3 py-1 rounded text-xs">Dynamics 365</span>
@@ -740,7 +852,8 @@
                     <div class="h-40 bg-gradient-to-br from-purple-500 to-purple-700"></div>
                     <div class="p-6 flex-1 flex flex-col">
                         <h3 class="font-display font-700 text-xl mb-2 text-white">Dashboard Analítico</h3>
-                        <p class="text-slate-400 mb-4 flex-1">Dashboard em React para visualização de métricas com gráficos interativos.</p>
+                        <p class="text-slate-400 mb-4 flex-1">Dashboard em React para visualização de métricas com
+                            gráficos interativos.</p>
                         <div class="flex gap-2 flex-wrap">
                             <span class="badge-tech px-3 py-1 rounded text-xs">React</span>
                             <span class="badge-tech px-3 py-1 rounded text-xs">APIs</span>
@@ -753,7 +866,8 @@
                     <div class="h-40 bg-gradient-to-br from-pink-500 to-pink-700"></div>
                     <div class="p-6 flex-1 flex flex-col">
                         <h3 class="font-display font-700 text-xl mb-2 text-white">Intranet Corporativa</h3>
-                        <p class="text-slate-400 mb-4 flex-1">Intranet com Drupal, autenticação LDAP e integração com Active Directory.</p>
+                        <p class="text-slate-400 mb-4 flex-1">Intranet com Drupal, autenticação LDAP e integração com
+                            Active Directory.</p>
                         <div class="flex gap-2 flex-wrap">
                             <span class="badge-tech px-3 py-1 rounded text-xs">Drupal</span>
                             <span class="badge-tech px-3 py-1 rounded text-xs">LDAP</span>
@@ -766,7 +880,8 @@
                     <div class="h-40 bg-gradient-to-br from-red-500 to-red-700"></div>
                     <div class="p-6 flex-1 flex flex-col">
                         <h3 class="font-display font-700 text-xl mb-2 text-white">Plataforma Educacional</h3>
-                        <p class="text-slate-400 mb-4 flex-1">Aplicação web educacional com recursos gamificados e desafios interativos.</p>
+                        <p class="text-slate-400 mb-4 flex-1">Aplicação web educacional com recursos gamificados e
+                            desafios interativos.</p>
                         <div class="flex gap-2 flex-wrap">
                             <span class="badge-tech px-3 py-1 rounded text-xs">HTML/CSS</span>
                             <span class="badge-tech px-3 py-1 rounded text-xs">JavaScript</span>
@@ -791,7 +906,8 @@
                 <div class="timeline-item scroll-fade delay-1">
                     <div class="card-hover bg-slate-800 p-6 rounded-xl">
                         <div class="flex justify-between items-start mb-2">
-                            <h3 class="font-display font-700 text-xl text-emerald-400">Pós-Graduação em Desenvolvimento Full Stack</h3>
+                            <h3 class="font-display font-700 text-xl text-emerald-400">Pós-Graduação em Desenvolvimento
+                                Full Stack</h3>
                             <span class="text-sm text-slate-400">2024 - Dezembro/2025</span>
                         </div>
                         <p class="text-slate-400 font-medium">Estácio de Sá (EAD)</p>
@@ -801,7 +917,8 @@
                 <div class="timeline-item scroll-fade delay-2">
                     <div class="card-hover bg-slate-800 p-6 rounded-xl">
                         <div class="flex justify-between items-start mb-2">
-                            <h3 class="font-display font-700 text-xl text-emerald-400">Bacharel em Sistemas de Informação</h3>
+                            <h3 class="font-display font-700 text-xl text-emerald-400">Bacharel em Sistemas de
+                                Informação</h3>
                             <span class="text-sm text-slate-400">2015 - 2022</span>
                         </div>
                         <p class="text-slate-400 font-medium">Universidade de Araraquara (Uniara)</p>
@@ -821,7 +938,8 @@
                 Estou sempre aberto a novos desafios e colaborações. Vamos conversar!
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://wa.me/5516997505196?text=Ol%C3%A1%20Isaias%2C%20gostei%20do%20seu%20curr%C3%ADculo%2C%20tem%20um%20minuto%3F" target="_blank" rel="noopener" class="btn-primary">Chamar no WhatsApp</a>
+                <a href="https://wa.me/5516997505196?text=Ol%C3%A1%20Isaias%2C%20gostei%20do%20seu%20curr%C3%ADculo%2C%20tem%20um%20minuto%3F"
+                    target="_blank" rel="noopener" class="btn-primary">Chamar no WhatsApp</a>
                 <a href="mailto:isaias@visioit.com.br" class="btn-secondary">isaias@visioit.com.br</a>
             </div>
         </div>
@@ -857,7 +975,8 @@
                 <div class="card-hover bg-slate-800 p-8 rounded-xl text-center scroll-fade delay-3">
                     <div class="text-3xl mb-4">💬</div>
                     <h3 class="font-display font-700 text-xl mb-2">WhatsApp</h3>
-                    <a href="https://wa.me/5516997505196?text=Ol%C3%A1%20Isaias%2C%20gostei%20do%20seu%20curr%C3%ADculo%2C%20tem%20um%20minuto%3F" target="_blank" rel="noopener" class="text-emerald-400 hover:text-emerald-300">
+                    <a href="https://wa.me/5516997505196?text=Ol%C3%A1%20Isaias%2C%20gostei%20do%20seu%20curr%C3%ADculo%2C%20tem%20um%20minuto%3F"
+                        target="_blank" rel="noopener" class="text-emerald-400 hover:text-emerald-300">
                         Chamar agora
                     </a>
                 </div>
@@ -865,7 +984,8 @@
                 <div class="card-hover bg-slate-800 p-8 rounded-xl text-center scroll-fade delay-4">
                     <div class="text-3xl mb-4">💼</div>
                     <h3 class="font-display font-700 text-xl mb-2">LinkedIn</h3>
-                    <a href="https://linkedin.com/in/isaiasvasilva" target="_blank" rel="noopener" class="text-emerald-400 hover:text-emerald-300">
+                    <a href="https://linkedin.com/in/isaiasvasilva" target="_blank" rel="noopener"
+                        class="text-emerald-400 hover:text-emerald-300">
                         /in/isaiasvasilva
                     </a>
                 </div>
@@ -875,8 +995,8 @@
 
     <!-- Botão flutuante WhatsApp -->
     <a href="https://wa.me/5516997505196?text=Ol%C3%A1%20Isaias%2C%20gostei%20do%20seu%20curr%C3%ADculo%2C%20tem%20um%20minuto%3F"
-       target="_blank" rel="noopener" aria-label="Chamar no WhatsApp"
-       class="fixed bottom-6 left-6 z-40 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center text-2xl shadow-lg animate-glow transition">
+        target="_blank" rel="noopener" aria-label="Chamar no WhatsApp"
+        class="fixed bottom-6 left-6 z-40 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center text-2xl shadow-lg animate-glow transition">
         💬
     </a>
 
@@ -890,8 +1010,10 @@
     <footer class="bg-slate-950 border-t border-slate-800 py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-400">
             <div class="flex justify-center gap-6 mb-4 text-sm">
-                <a href="https://github.com/isaiasvas" target="_blank" rel="noopener" class="hover:text-emerald-400 transition">GitHub</a>
-                <a href="https://linkedin.com/in/isaiasvasilva" target="_blank" rel="noopener" class="hover:text-emerald-400 transition">LinkedIn</a>
+                <a href="https://github.com/isaiasvas" target="_blank" rel="noopener"
+                    class="hover:text-emerald-400 transition">GitHub</a>
+                <a href="https://linkedin.com/in/isaiasvasilva" target="_blank" rel="noopener"
+                    class="hover:text-emerald-400 transition">LinkedIn</a>
                 <a href="mailto:isaias@visioit.com.br" class="hover:text-emerald-400 transition">Email</a>
             </div>
             <p>© 2025 Isaías Silva. Desenvolvido com dedicação e paixão por código.</p>
@@ -905,7 +1027,7 @@
             rootMargin: '0px 0px -50px 0px'
         };
 
-        const observer = new IntersectionObserver(function(entries) {
+        const observer = new IntersectionObserver(function (entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
@@ -930,7 +1052,7 @@
         });
 
         // Efeito parallax no hero
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const hero = document.querySelector('.hero-gradient');
             if (hero) {
                 hero.style.backgroundPosition = '0 ' + (window.scrollY * 0.5) + 'px';
@@ -940,7 +1062,7 @@
         // Menu mobile
         const mobileBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        mobileBtn.addEventListener('click', function() {
+        mobileBtn.addEventListener('click', function () {
             mobileMenu.classList.toggle('hidden');
             mobileMenu.classList.toggle('flex');
         });
@@ -953,14 +1075,14 @@
 
         // Botão voltar ao topo
         const backToTop = document.getElementById('back-to-top');
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             if (window.scrollY > 500) {
                 backToTop.classList.remove('opacity-0', 'pointer-events-none');
             } else {
                 backToTop.classList.add('opacity-0', 'pointer-events-none');
             }
         });
-        backToTop.addEventListener('click', function() {
+        backToTop.addEventListener('click', function () {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
@@ -981,7 +1103,7 @@
         const savedTheme = localStorage.getItem('theme') || 'dark';
         applyTheme(savedTheme);
 
-        themeToggle.addEventListener('click', function() {
+        themeToggle.addEventListener('click', function () {
             const isLight = document.body.classList.contains('light-mode');
             const newTheme = isLight ? 'dark' : 'light';
             localStorage.setItem('theme', newTheme);
@@ -989,4 +1111,5 @@
         });
     </script>
 </body>
+
 </html>
