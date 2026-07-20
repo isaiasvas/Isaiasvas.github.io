@@ -2,11 +2,11 @@
 
 # 👋 Olá, eu sou Isaias Vitor de Almeida Silva
 
-### Full Stack Developer • Dynamics 365 Developer • Software Engineer
+### Full Stack Developer • Dynamics 365 Developer • Docente de Tecnologia
 
-Desenvolvedor Full Stack com mais de **5 anos de experiência** no desenvolvimento de aplicações web, integrações corporativas e soluções Microsoft Dynamics 365.
+Desenvolvedor Full Stack com trajetória em tecnologia desde 2016 e experiência profissional registrada desde 2020, atuando no desenvolvimento de aplicações web, integrações corporativas e soluções Microsoft Dynamics 365.
 
-Atualmente atuo como **Desenvolvedor Full Stack**, desenvolvendo soluções para grandes empresas, com foco em arquitetura de software, desenvolvimento de APIs, automação de processos, integrações e aplicações escaláveis.
+Atualmente atuo como **Desenvolvedor Full Stack** (prestando serviço para a Petrobras via Simworx) e como **Docente de Informática no SENAC**, unindo prática de mercado à formação de novos desenvolvedores.
 
 Tenho experiência em todas as etapas do desenvolvimento de software, desde levantamento de requisitos até implantação em produção, sempre priorizando qualidade, performance e boas práticas.
 
@@ -14,13 +14,13 @@ Tenho experiência em todas as etapas do desenvolvimento de software, desde leva
 
 ## 👨‍💻 Resumo Profissional
 
-- 💼 Mais de **5 anos** de experiência em desenvolvimento Full Stack.
-- 🚀 Desenvolvimento de aplicações web de alta performance.
-- ⚙️ Especialista em integrações REST, SOAP e Microsoft Dynamics 365.
-- ☁️ Experiência com Azure, Logic Apps, Power Automate e APIs.
-- 🏗️ Desenvolvimento de Plugins, Custom APIs e Web Resources para Dynamics CRM.
-- 🐳 Experiência com Docker e ambientes Linux.
-- 📚 Pós-graduado em Desenvolvimento Full Stack.
+- 💼 Atuação em tecnologia desde 2016, com experiência profissional Full Stack desde 2020.
+- 🚀 Desenvolvimento de aplicações web com PHP (Laravel, WordPress, Drupal) e Python (Django).
+- ⚙️ Front-end com JavaScript, React, Angular e jQuery.
+- ☁️ Experiência com Microsoft Dynamics 365 CRM, Power Automate e Azure.
+- 🏗️ Desenvolvimento de Plugins, Web APIs e Web Resources para Dynamics 365.
+- 🐳 Experiência com Docker, Git e ambientes Linux.
+- 📚 Pós-graduando em Desenvolvimento Full Stack.
 
 ---
 
@@ -28,114 +28,69 @@ Tenho experiência em todas as etapas do desenvolvimento de software, desde leva
 
 ## Backend
 
-- C#
-- .NET Framework
-- ASP.NET
-- PHP
-- Laravel
-- Python
-- Django
-- Node.js
+- PHP (Laravel, WordPress, Drupal)
+- Python (Django)
+- C# (.NET, Dynamics 365)
 
 ## Frontend
 
 - JavaScript
-- TypeScript
 - React
-- HTML5
-- CSS3
-- Bootstrap
-- Tailwind CSS
+- Angular
 - jQuery
+- HTML5 / CSS3
 
 ## Banco de Dados
 
-- SQL Server
 - MySQL
 - PostgreSQL
 
 ## Microsoft
 
 - Microsoft Dynamics 365 CRM
-- Power Platform
 - Power Automate
-- Logic Apps
-- Azure
+- Azure (Web Apps, Key Vault, Application Insights)
 - Azure DevOps
 
 ## DevOps & Ferramentas
 
 - Docker
-- Git
-- GitHub
+- Git / GitHub
+- Jenkins
 - Postman
 - Linux
-- Windows Server
-- Active Directory
-- Samba
+- Active Directory / GPO / Samba
 
 ---
 
 # 💼 Experiência
 
-### Full Stack Developer
+### Desenvolvedor Full Stack — Simworx (atual)
+Prestação de serviço para a Petrobras: manutenção e evolução de microsserviços e aplicações, back-end em Python/Django, front-end em React, Docker e CI/CD com Jenkins.
 
-Desenvolvimento de aplicações corporativas utilizando:
+### Docente de Informática — SENAC (atual)
+Aulas de Desenvolvimento Web, Lógica de Programação e Infraestrutura de Redes, com projetos integradores voltados à empregabilidade.
 
-- Laravel
-- Django
-- React
-- Dynamics 365 CRM
-- APIs REST
-- Integrações SOAP
-- Azure
-- Docker
+### Desenvolvedor Full Stack — Pentare (Parceiro Microsoft)
+Customização do Microsoft Dynamics 365 (CRM), plugins e Web APIs em C#, Power Automate e Azure.
 
-Atuação em:
-
-- Desenvolvimento de sistemas web
-- Arquitetura de software
-- Integração entre sistemas
-- Otimização de performance
-- Correção de bugs
-- Desenvolvimento de novas funcionalidades
-- Automação de processos
+### Desenvolvedor Full Stack — VisioIT (2020–2025)
+Aplicações web em PHP (Laravel, Drupal, WordPress) e Python (Django), integração de APIs REST, Git e Docker.
 
 ---
 
 # 🎓 Formação
 
-**Pós-graduação em Desenvolvimento Full Stack**
+**Pós-Graduação em Desenvolvimento Full Stack** — Estácio de Sá (EAD), 2024–2025
 
-**Bacharelado em Sistemas de Informação**
+**Bacharelado em Sistemas de Informação** — Universidade de Araraquara (Uniara), 2015–2022
 
 ---
 
 # 📈 Principais Competências
 
-✔ Arquitetura de Software
-
-✔ APIs REST
-
-✔ Microsoft Dynamics 365
-
-✔ Power Platform
-
-✔ Azure
-
-✔ Laravel
-
-✔ Django
-
-✔ React
-
-✔ C#
-
-✔ Docker
-
-✔ SQL
-
-✔ Git
+✔ Arquitetura de Software · ✔ APIs REST · ✔ Microsoft Dynamics 365 · ✔ Power Automate · ✔ Azure
+✔ Laravel · ✔ Django · ✔ React · ✔ Angular · ✔ C# · ✔ Docker · ✔ SQL · ✔ Git
 
 ---
 
@@ -150,7 +105,11 @@ Atuação em:
 <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
 </a>
 
-<a href="https://wa.me/5516997505196">
+<a href="https://github.com/isaiasvas">
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+
+<a href="https://wa.me/5516997505196?text=Ol%C3%A1%20Isaias%2C%20gostei%20do%20seu%20curr%C3%ADculo%2C%20tem%20um%20minuto%3F">
 <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/>
 </a>
 

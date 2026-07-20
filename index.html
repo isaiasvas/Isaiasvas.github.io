@@ -34,6 +34,15 @@
             font-family: 'Inter', sans-serif;
         }
 
+        html, body {
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
+
+        img, svg {
+            max-width: 100%;
+        }
+
         .font-display {
             font-family: 'Poppins', sans-serif;
         }
@@ -225,9 +234,15 @@
 
         /* Stats counter */
         .stat-number {
-            font-size: 2.5rem;
+            font-size: 1.75rem;
             font-weight: 800;
             color: #10b981;
+        }
+
+        @media (min-width: 640px) {
+            .stat-number {
+                font-size: 2.5rem;
+            }
         }
 
         /* Timeline */
@@ -356,18 +371,18 @@
         <div class="hero-content max-w-7xl w-full px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <!-- Left content -->
-                <div class="animate-slideInLeft">
+                <div class="animate-slideInLeft min-w-0">
                     <div class="inline-block mb-4">
                         <span class="badge-tech px-4 py-2 rounded-full text-sm font-medium">
                             Desenvolvedor Full Stack | Docente
                         </span>
                     </div>
                     
-                    <h1 class="font-display font-800 text-5xl md:text-6xl leading-tight mb-6 text-white">
+                    <h1 class="font-display font-800 text-4xl sm:text-5xl md:text-6xl leading-tight mb-6 text-white break-words">
                         Transformando Ideias em Código
                     </h1>
                     
-                    <p class="text-xl text-slate-300 mb-8 leading-relaxed">
+                    <p class="text-base sm:text-lg md:text-xl text-slate-300 mb-8 leading-relaxed">
                         Desenvolvedor Full Stack com experiência em PHP, Python, JavaScript e C#. 
                         Docente no SENAC aplicando vivências reais de mercado na formação de novos talentos.
                     </p>
@@ -378,18 +393,18 @@
                     </div>
 
                     <!-- Stats -->
-                    <div class="grid grid-cols-3 gap-8 mt-16">
+                    <div class="grid grid-cols-3 gap-3 sm:gap-8 mt-10 sm:mt-16">
                         <div>
                             <div class="stat-number">9+</div>
-                            <p class="text-slate-400">Anos de Experiência</p>
+                            <p class="text-slate-400 text-xs sm:text-base">Anos de Experiência</p>
                         </div>
                         <div>
                             <div class="stat-number">30+</div>
-                            <p class="text-slate-400">Projetos Realizados</p>
+                            <p class="text-slate-400 text-xs sm:text-base">Projetos Realizados</p>
                         </div>
                         <div>
                             <div class="stat-number">100+</div>
-                            <p class="text-slate-400">Alunos Formados</p>
+                            <p class="text-slate-400 text-xs sm:text-base">Alunos Formados</p>
                         </div>
                     </div>
                 </div>
